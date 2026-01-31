@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   CheckCircle2, 
@@ -140,7 +141,7 @@ const TestimonialCarousel = ({ images }: { images: string[] }) => {
   };
 
   return (
-    <div className="relative w-full max-sm mx-auto">
+    <div className="relative w-full max-w-sm mx-auto">
       <div className="absolute -inset-10 bg-brand-primary/10 rounded-full blur-3xl -z-10"></div>
       <div 
         className="relative overflow-hidden rounded-3xl shadow-2xl bg-white aspect-[9/16] md:aspect-[4/5] transition-all"
@@ -403,7 +404,7 @@ export default function App() {
             <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4 text-center uppercase leading-tight">ENTÃO VOCÊ PRECISA DISSO:</h3>
             <div className="space-y-3 mb-8">
               {[
-                "Cardápio created by a nutritionist",
+                "Cardápio criado por uma nutricionista",
                 "Mais de 67 opções saudáveis",
                 "Baixíssimas em calorias",
                 "Sabor novo todos os dias sem enjoar",
@@ -503,7 +504,7 @@ export default function App() {
               <h2 className="text-3xl font-bold text-brand-primary mb-1">Quem sou eu?</h2>
               <h3 className="text-xl font-bold text-brand-accent mb-4">Receitas da Nutri Laura Maria</h3>
               <p className="text-gray-600 font-regular text-sm md:text-base leading-relaxed mb-6 italic">
-                “Meu nome é Laura Maria e, por muito tempo, me alimentar bem era uma tarefa extremamente difícil pra mim. Eu tentava, falhava, me culpava… e desistia. No foi com dietas malucas que emagreci. Foi organizando minha alimentação e da minha família com receitas saudáveis que saciam de verdade. Elas funcionaram tão bem que começaram a fazer sucesso na internet e acabou que eu resolvi disponibilizar esse guia para mulheres comuns, como eu, que querem comer melhor sem viver em dieta chata,”
+                “Meu nome é Laura Maria e, por muito tempo, me alimentar bem era uma tarefa extremamente difícil pra mim. Eu tentava, falhava, me culpava… e desistia. Não foi com dietas malucas que emagreci. Foi organizando minha alimentação e da minha família com receitas saudáveis que saciam de verdade. Elas funcionaram tão bem que começaram a fazer sucesso na internet e acabou que eu resolvi disponibilizar esse guia para mulheres comuns, como eu, que querem comer melhor sem viver em dieta chata,”
               </p>
               <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} className="text-sm py-3 px-6" />
             </div>
@@ -587,7 +588,7 @@ export default function App() {
             />
             <AccordionItem 
               question="As receitas servem para a família toda?" 
-              answer="Com certeza! São ideias que agradam adultos e crianças, with ingredientes acessíveis e muito sabor." 
+              answer="Com certeza! São ideias que agradam adultos e crianças, com ingredientes acessíveis e muito sabor." 
             />
             <AccordionItem 
               question="As receitas são fáceis de fazer?" 
