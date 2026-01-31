@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   CheckCircle2, 
@@ -34,7 +33,7 @@ const DynamicDateBanner = () => {
   }, []);
 
   return (
-    <div className="bg-red-600 text-white py-2 px-4 text-center font-bold text-sm md:text-base relative w-full shadow-lg z-50">
+    <div className="bg-red-600 text-white py-2 px-4 text-center font-bold text-sm md:text-base sticky top-0 w-full shadow-lg z-50">
       OFERTA VÁLIDA APENAS NOS DIAS {dates.join(', ')}
     </div>
   );
