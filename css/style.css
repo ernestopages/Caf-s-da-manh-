@@ -1,106 +1,90 @@
-/* Reset e Base */
+/* Configurações Globais */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body {
-    -webkit-font-smoothing: antialiased;
+/* Animação do Botão CTA */
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-/* Custom Buttons */
 .cta-button {
-    background: #16a34a;
-    color: white;
-    font-weight: 800;
-    padding: 1.25rem 2.5rem;
-    border-radius: 1.25rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: pulse 2s infinite;
+  background-color: #16a34a;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  animation: pulseScale 2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .cta-button:hover {
-    background: #15803d;
-    transform: translateY(-2px) scale(1.02);
+  background-color: #15803d;
+  transform: translateY(-2px);
 }
 
 .cta-button:active {
-    transform: scale(0.98);
+  transform: scale(0.95);
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+/* Recipe Cards */
+.recipe-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Carousel */
-.carousel-container {
-    overflow: hidden;
-    border-radius: 2rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+.recipe-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
 }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    color: #2D5A27;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    transition: all 0.2s;
+.recipe-title {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
 }
 
-.carousel-btn:hover {
-    background: #2D5A27;
-    color: white;
+@media (min-width: 768px) {
+  .recipe-card img { height: 180px; }
+  .recipe-title { font-size: 1rem; }
 }
 
-/* FAQ Accordion */
-.faq-item {
-    border-bottom: 1px solid #f3f4f6;
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #2D5A27;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  border: 1px solid #f3f4f6;
 }
 
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 1.5rem 0;
-    font-weight: 700;
-    color: #1f2937;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.2s;
+/* FAQ State Classes */
+.faq-item.active .faq-content {
+  max-height: 500px;
+  padding-bottom: 1.5rem;
 }
 
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: #2D5A27;
-}
-
-.faq-item.active .faq-question::after {
-    content: '-';
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    color: #4b5563;
-    font-size: 0.95rem;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 200px;
-    padding-bottom: 1.5rem;
+.faq-item.active i {
+  transform: rotate(180deg);
 }
