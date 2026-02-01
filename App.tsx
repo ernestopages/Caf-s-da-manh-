@@ -284,7 +284,7 @@ export default function App() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 md:rotate-2">
               <img 
-                src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769885066/IMAGEM_COM_INFORMA%C3%87%C3%95ES_c7xkxt.webp" 
+                src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769888224/ordem_de_montagem_2_txgo1d.webp" 
                 alt="Informações do Guia" 
                 className="w-full h-auto"
               />
@@ -328,9 +328,12 @@ export default function App() {
       {/* Doces */}
       <section className="bg-brand-primary py-20 md:py-32 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-xl md:text-3xl font-bold mb-12 max-w-4xl mx-auto leading-tight uppercase">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 max-w-4xl mx-auto leading-tight uppercase">
             <span className="text-yellow-200">+32 OPÇÕES</span> DE CAFÉS DA MANHÃ DOCE, SAUDÁVEIS, ZERO AÇÚCAR E <span className="text-yellow-200">IRRESISTÍVEIS.</span>
           </h2>
+          <p className="text-sm md:text-lg font-medium mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed">
+            Além dos 67 opções da nutri, você ainda recebe +32 receitas de café da manhã doces e zero açúcar pra quando bater aquela vontade de comer um docinho.
+          </p>
           <div className="max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition duration-500 ring-4 ring-white/10">
             <img 
               src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769884568/Capa_doce_jqujjr.webp" 
@@ -349,7 +352,7 @@ export default function App() {
             {[
               {
                 title: "SALADAS DE POTE + MOLHOS",
-                desc: "+30 saladas no pote com molhos deliciosos que saciam de verdade, prepare tudo em apenas 30 minutos e tenha salada pronta para a sua família por 7 dias",
+                desc: "+30 saladas no pote with molhos deliciosos que saciam de verdade, prepare tudo em apenas 30 minutos e tenha salada pronta para a sua família por 7 dias",
                 img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769886405/SALADAS_DE_POTE_bqdnph.jpg"
               },
               {
@@ -359,7 +362,7 @@ export default function App() {
               },
               {
                 title: "MARMITAS FIT FÁCIL",
-                desc: "Chega de cozinhar todo santo dia, tenha a paz de ter comida pronta e ficar 15 dias longe do fogão",
+                desc: "Chega de cojinhar todo santo dia, tenha a paz de ter comida pronta e ficar 15 dias longe do fogão",
                 img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769886795/MARMITAS_FIT_ekjvww.webp"
               }
             ].map((bonus, idx) => (
@@ -490,7 +493,7 @@ export default function App() {
 
       {/* Expert Section */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center md:text-left">
+        <div className="container mx-auto px-4 max-w-4xl text-left">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/3">
               <img 
@@ -502,9 +505,13 @@ export default function App() {
             <div className="w-full md:w-2/3">
               <h2 className="text-3xl font-bold text-brand-primary mb-1">Quem sou eu?</h2>
               <h3 className="text-xl font-bold text-brand-accent mb-4">Receitas da Nutri Laura Maria</h3>
-              <p className="text-gray-600 font-regular text-sm md:text-base leading-relaxed mb-6 italic">
-                “Meu nome é Laura Maria e, por muito tempo, me alimentar bem era uma tarefa extremamente difícil pra mim. Eu tentava, falhava, me culpava… e desistia. Não foi com dietas malucas que emagreci. Foi organizando minha alimentação e da minha família com receitas saudáveis que saciam de verdade. Elas funcionaram tão bem que começaram a fazer sucesso na internet e acabou que eu resolvi disponibilizar esse guia para mulheres comuns, como eu, que querem comer melhor sem viver em dieta chata,”
-              </p>
+              <div className="text-gray-600 font-regular text-sm md:text-base leading-relaxed mb-6 space-y-4">
+                <p>Meu nome é Laura Maria e, por muito tempo, emagrecer sempre foi uma luta pra mim.</p>
+                <p>Eu tentava me alimentar bem, mas falhava logo nos primeiros dias, principalmente por não saber o que comer no café da manhã. Pulava refeições, comia qualquer coisa ou exagerava no doce, e isso sabotava todo o resto do dia.</p>
+                <p>Tudo mudou quando me tornei nutricionista e entendi o processo. Passei a organizar meu café da manhã with receitas rápidas, saudáveis, saborosas e que realmente saciam, e percebi que acertar a primeira refeição do dia facilitava o controle da fome, da ansiedade e das escolhas ao longo do dia.</p>
+                <p>Essas receitas foram grandes aliadas no meu emagrecimento e fizeram tanto sucesso entre minhas pacientes e na internet que resolvi organizá-las em um guia prático, pra quem quer emagrecer com agilidade, sabor e sem dieta chata.</p>
+                <p>Além dos cafés da manhã, incluí tudo o que uso e indico na prática: Saladas no pote que duram até 7 dias na geladeira, receitas de marmitas congeladas pra ganhar tempo e um guia de airfryer pra facilitar a rotina de quem quer comer saudável.</p>
+              </div>
               <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} className="text-sm py-3 px-6" />
             </div>
           </div>
@@ -551,7 +558,7 @@ export default function App() {
             </div>
             <div className="w-full md:w-1/2 space-y-1.5">
               {[
-                "Recebe no E-mail",
+                "Recebe imediatamente no E-mail após a compra",
                 "Pode imprimir no papel",
                 "Pode ver no celular",
                 "Pode ver no computador",
@@ -607,7 +614,7 @@ export default function App() {
             />
           </div>
           <div className="mt-10 text-center">
-            <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} />
+            <CTAButton text="QUERO AS RECEITAS" onClick={scrollToOffer} />
           </div>
         </div>
       </section>
