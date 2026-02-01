@@ -302,7 +302,7 @@ export default function App() {
           <SectionTitle>
             ALGUNS CAFÉS DA MANHÃ DA <span className="text-brand-accent">NUTRI</span> QUE VOCÊ IRÁ <span className="text-brand-accent">APRENDER:</span>
           </SectionTitle>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-5xl mx-auto mt-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-5_xl mx-auto mt-6">
             {recipes.map((recipe, idx) => (
               <div key={idx} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-md flex flex-col h-full">
                 <img src={recipe.img} alt={recipe.title} className="w-full h-28 md:h-40 object-cover" />
@@ -345,7 +345,7 @@ export default function App() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionTitle>VOCÊ AINDA IRÁ RECEBER <span className="text-brand-accent">+3 BÔNUS</span> EXCLUSIVOS:</SectionTitle>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5_xl mx-auto mt-10">
             {[
               {
                 title: "SALADAS DE POTE + MOLHOS",
@@ -444,7 +444,7 @@ export default function App() {
             </h2>
             <div className="w-full max-w-lg mb-8">
               <img 
-                src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769884572/mockup_oferta_krzcjm.webp" 
+                src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769884570/MOCKUP_CELULAR_NOTEBOOK_TABLET_nsnfpl.webp" 
                 alt="Kit Completo" 
                 className="w-full h-auto drop-shadow-xl rounded-2xl"
               />
@@ -531,7 +531,7 @@ export default function App() {
 
       {/* Delivery Section */}
       <section className="py-8 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-5_xl">
           <h2 className="text-2xl md:text-4xl font-bold text-brand-primary mb-6 text-center uppercase leading-tight">
             COMO IREI <span className="text-brand-accent">RECEBER</span> AS RECEITAS?
           </h2>
@@ -626,7 +626,7 @@ export default function App() {
           </div>
 
           <p className="text-[10px] md:text-xs opacity-50 max-w-2xl mx-auto leading-relaxed">
-            Este produto não substitui o parecer médico profissional. Sempre consulte um médico ou nutricionista para tratar de assuntos relativos à saúde e alimentação. Os resultados podem variar de pessoa para pessoa.
+            Este produto não substitui o parecer médico profissional. Always consult a doctor or nutritionist for health and dietary matters. Results may vary from person to person.
           </p>
         </div>
       </footer>

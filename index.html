@@ -26,6 +26,15 @@
                 secondary: '#FF6B6B',
                 accent: '#D97706',
               }
+            },
+            keyframes: {
+              pulseScale: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              }
+            },
+            animation: {
+              pulseScale: 'pulseScale 2s ease-in-out infinite',
             }
           }
         }
