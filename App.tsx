@@ -197,7 +197,11 @@ export default function App() {
     offerRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const checkoutLink = "https://pay.hotmart.com/YOUR_LINK_HERE";
+  const checkoutLink = "https://indec-digital.mycartpanda.com/checkout/206586422:1";
+
+  const goToCheckout = () => {
+    window.location.href = checkoutLink;
+  };
 
   const recipes = [
     { title: "Ninho de Batatas com Ovos e Frios", time: "10 min", cal: "195 cal", img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769885315/NINHO_DE_BATATA_COM_OVO_ilbjnu.jpg" },
@@ -512,7 +516,7 @@ export default function App() {
                 <p>Essas receitas foram grandes aliadas no meu emagrecimento e fizeram tanto sucesso entre minhas pacientes e na internet que resolvi organizá-las em um guia prático, pra quem quer emagrecer com agilidade, sabor e sem dieta chata.</p>
                 <p>Além dos cafés da manhã, incluí tudo o que uso e indico na prática: Saladas no pote que duram até 7 dias na geladeira, receitas de marmitas congeladas pra ganhar tempo e um guia de airfryer pra facilitar a rotina de quem quer comer saudável.</p>
               </div>
-              <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} className="text-sm py-3 px-6" />
+              <CTAButton text="QUERO COMPRAR AGORA" onClick={goToCheckout} className="text-sm py-3 px-6" />
             </div>
           </div>
         </div>
@@ -532,7 +536,7 @@ export default function App() {
           <p className="text-base md:text-lg text-gray-700 font-regular mb-8 leading-relaxed">
             Essa é nossa garantia: Teste por 7 dias e se não gostar, <span className="font-bold text-brand-accent">devolvemos</span> seu <span className="font-bold text-brand-accent">dinheiro</span> na hora e você ainda <span className="font-bold text-brand-accent">fica</span> com o guia!
           </p>
-          <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} />
+          <CTAButton text="QUERO COMPRAR AGORA" onClick={goToCheckout} />
         </div>
       </section>
 
@@ -572,7 +576,7 @@ export default function App() {
                 </div>
               ))}
               <div className="pt-4">
-                <CTAButton text="QUERO COMPRAR AGORA" onClick={scrollToOffer} className="w-full" />
+                <CTAButton text="QUERO COMPRAR AGORA" onClick={goToCheckout} className="w-full" />
               </div>
             </div>
           </div>
@@ -614,7 +618,7 @@ export default function App() {
             />
           </div>
           <div className="mt-10 text-center">
-            <CTAButton text="QUERO AS RECEITAS" onClick={scrollToOffer} />
+            <CTAButton text="QUERO AS RECEITAS" onClick={goToCheckout} />
           </div>
         </div>
       </section>
