@@ -242,7 +242,7 @@ export default function App() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-6 md:py-10 flex flex-col items-center">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-brand-primary leading-tight max-w-4xl mb-3">
-          APRENDA A FAZER <span className="text-brand-accent">+67 CAFÉS</span> DA MANHÃ DA <span className="text-brand-accent">NUTRI</span> SABOROSOS E QUE <span className="text-brand-accent">SACIA</span> POR HORAS
+          APRENDA A FAZER <span className="text-brand-accent">+67 CAFÉS</span> DA MANHÃ DA <span className="text-brand-accent">NUTRI</span> SABOROSOS E QUE <span className="text-brand-accent">SACIAM</span> POR HORAS
         </h1>
         <p className="text-base md:text-lg text-center text-gray-600 max-w-2xl mb-6 font-regular">
           Receitas rápidas, com calorias baixas e criadas pela Nutri Laura Maria para quem quer sabor e praticidade no dia a dia.
@@ -618,7 +618,7 @@ export default function App() {
             />
           </div>
           <div className="mt-10 text-center">
-            <CTAButton text="QUERO AS RECEITAS" onClick={goToCheckout} />
+            <CTAButton text="QUERO COMPRAR AGORA" onClick={goToCheckout} />
           </div>
         </div>
       </section>
