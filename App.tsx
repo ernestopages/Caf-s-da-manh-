@@ -241,8 +241,8 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-6 md:py-10 flex flex-col items-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-center text-brand-primary leading-tight max-w-4xl mb-3">
-          APRENDA A FAZER <span className="text-brand-accent">+67 CAFÉS</span> DA MANHÃ DA <span className="text-brand-accent">NUTRI</span> SABOROSOS E QUE <span className="text-brand-accent">SACIAM</span> POR HORAS
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-brand-primary leading-tight max-w-4xl mb-3 uppercase">
+          Aprenda a Fazer <span className="text-brand-accent">+67 Cafés da Manhã Saudáveis</span>, Prontos em Até <span className="text-brand-accent">15 Minutos</span> e com no Máximo <span className="text-brand-accent">300 Calorias</span>
         </h1>
         <p className="text-base md:text-lg text-center text-gray-600 max-w-2xl mb-6 font-regular">
           Receitas rápidas, com calorias baixas e criadas pela Nutri Laura Maria para quem quer sabor e praticidade no dia a dia.
@@ -271,31 +271,19 @@ export default function App() {
       {/* O Que Você Vai Encontrar */}
       <section className="bg-gray-50 py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-primary mb-6 text-center uppercase leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-primary mb-8 text-center uppercase leading-tight">
             O QUE VOCÊ<br />
             <span className="text-brand-accent">VAI ENCONTRAR:</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto">
-            <div className="space-y-1 md:space-y-2">
+          <div className="max-w-md mx-auto space-y-3">
               {whatYouFind.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 py-0.5">
-                  <div className="shrink-0">
+                <div key={idx} className="flex items-center gap-4 py-3 px-4 bg-white rounded-2xl shadow-sm border border-gray-100 transition hover:shadow-md">
+                  <div className="shrink-0 p-2 bg-gray-50 rounded-lg">
                     {item.icon}
                   </div>
-                  <span className="font-bold text-gray-700 text-base md:text-lg leading-tight whitespace-nowrap">{item.text}</span>
+                  <span className="font-bold text-gray-700 text-base md:text-lg leading-tight">{item.text}</span>
                 </div>
               ))}
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 md:rotate-2">
-              <img 
-                src="https://res.cloudinary.com/drcqck3r9/image/upload/v1769888224/ordem_de_montagem_2_txgo1d.webp" 
-                alt="Informações do Guia" 
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-          <div className="mt-12 text-center">
-            <CTAButton text="QUERO AS RECEITAS" onClick={scrollToOffer} />
           </div>
         </div>
       </section>
@@ -387,27 +375,11 @@ export default function App() {
         </div>
       </section>
 
-      {/* Pain vs Solution */}
-      <section className="py-8 bg-red-50/20">
+      {/* Solution Section */}
+      <section className="py-8 bg-green-50/20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 overflow-hidden border border-red-100">
-            <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-4 text-center uppercase leading-tight">VOCÊ PASSA POR ISSO?</h3>
-            <div className="space-y-3 mb-8">
-              {[
-                "Falta de opções saudáveis de café da manhã",
-                "Dificuldade em perder peso e alimentar-se bem",
-                "Falta de receitas saborosas que nutrem",
-                "Falta de receitas rápidas para o café da manhã",
-                "Falta de nutrientes necessários para o dia"
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-gray-700 text-sm md:text-base">
-                  <XCircle className="text-red-500 shrink-0 mt-0.5" size={20} />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="h-px bg-gray-100 w-full mb-8"></div>
-            <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4 text-center uppercase leading-tight">ENTÃO VOCÊ PRECISA DISSO:</h3>
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 overflow-hidden border border-green-100">
+            <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-6 text-center uppercase leading-tight">ENTÃO VOCÊ PRECISA DISSO:</h3>
             <div className="space-y-3 mb-8">
               {[
                 "Cardápio criado por uma nutricionista",
@@ -512,7 +484,7 @@ export default function App() {
               <div className="text-gray-600 font-regular text-sm md:text-base leading-relaxed mb-6 space-y-4">
                 <p>Meu nome é Laura Maria e, por muito tempo, emagrecer sempre foi uma luta pra mim.</p>
                 <p>Eu tentava me alimentar bem, mas falhava logo nos primeiros dias, principalmente por não saber o que comer no café da manhã. Pulava refeições, comia qualquer coisa ou exagerava no doce, e isso sabotava todo o resto do dia.</p>
-                <p>Tudo mudou quando me tornei nutricionista e entendi o processo. Passei a organizar meu café da manhã with receitas rápidas, saudáveis, saborosas e que realmente saciam, e percebi que acertar a primeira refeição do dia facilitava o controle da fome, da ansiedade e das escolhas ao longo do dia.</p>
+                <p>Tudo mudou quando me tornei nutricionista e entendi o processo. Passei a organizar meu café da manhã with receitas rápidas, saudáveis, saborosas e que realmente saciam, e percebi que acertar a primeira refeição do dia facilitava o controle da fome, da anciedade e das escolhas ao longo do dia.</p>
                 <p>Essas receitas foram grandes aliadas no meu emagrecimento e fizeram tanto sucesso entre minhas pacientes e na internet que resolvi organizá-las em um guia prático, pra quem quer emagrecer com agilidade, sabor e sem dieta chata.</p>
                 <p>Além dos cafés da manhã, incluí tudo o que uso e indico na prática: Saladas no pote que duram até 7 dias na geladeira, receitas de marmitas congeladas pra ganhar tempo e um guia de airfryer pra facilitar a rotina de quem quer comer saudável.</p>
               </div>
