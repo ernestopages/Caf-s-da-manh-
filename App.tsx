@@ -343,25 +343,26 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-6 max-w-5_xl mx-auto mt-10">
             {[
               {
-                title: "SALADAS DE POTE + MOLHOS",
-                desc: "+30 saladas no pote with molhos deliciosos que saciam de verdade, prepare tudo em apenas 30 minutos e tenha salada pronta para a sua família por 7 dias",
+                bonusNumber: "Bônus 01:",
+                title: "+30 RECEITAS DE SALADAS DE POTE QUE DURAM 7 DIAS NA GELADEIRA",
                 img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769886405/SALADAS_DE_POTE_bqdnph.jpg"
               },
               {
-                title: "AIRFRYER PROTÉICA",
-                desc: "Receitas rápidas, alta em proteínas e de baixas calorias",
+                bonusNumber: "Bônus 02:",
+                title: "RECEITAS PROTEICAS PARA AIRFRYER",
                 img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769886423/AIRFRIYER_nowa1b.webp"
               },
               {
-                title: "MARMITAS FIT FÁCIL",
-                desc: "Chega de cojinhar todo santo dia, tenha a paz de ter comida pronta e ficar 15 dias longe do fogão",
+                bonusNumber: "Bônus 03:",
+                title: "MARMITAS FIT PARA CONGELAR",
                 img: "https://res.cloudinary.com/drcqck3r9/image/upload/v1769886795/MARMITAS_FIT_ekjvww.webp"
               }
             ].map((bonus, idx) => (
               <div key={idx} className="bg-gray-50 rounded-2xl p-4 border border-gray-100 flex flex-col h-full shadow-sm">
                 <img src={bonus.img} alt={bonus.title} className="w-full h-32 object-cover rounded-xl mb-3" />
-                <h3 className="font-bold text-base text-brand-primary mb-1 uppercase leading-tight">{bonus.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{bonus.desc}</p>
+                <h3 className="font-bold text-base text-brand-primary mb-1 uppercase leading-tight">
+                  <span className="text-brand-accent">{bonus.bonusNumber}</span> {bonus.title}
+                </h3>
                 <div className="mt-auto pt-2 flex items-center gap-2 text-xs">
                   <span className="text-red-400 line-through">(R$ 29,90)</span>
                   <span className="font-bold text-green-600">HOJE É GRÁTIS</span>
@@ -375,12 +376,23 @@ export default function App() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-10 md:py-14 overflow-hidden bg-gray-50/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-primary mb-6 text-center uppercase leading-tight">
+            VEJA O QUE DIZEM SOBRE AS<br />
+            <span className="text-brand-accent">RECEITAS DA NUTRI:</span>
+          </h2>
+          <TestimonialCarousel images={testimonials} />
+        </div>
+      </section>
+
       {/* Solution Section */}
       <section className="py-8 bg-green-50/20">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 overflow-hidden border border-green-100">
-            <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-6 text-center uppercase leading-tight">ENTÃO VOCÊ PRECISA DISSO:</h3>
-            <div className="space-y-3 mb-8">
+            <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-6 text-center uppercase leading-tight">É DISSO QUE VOCÊ PRECISA:</h3>
+            <div className="space-y-3">
               {[
                 "Cardápio criado por uma nutricionista",
                 "Mais de 67 opções saudáveis",
@@ -396,21 +408,7 @@ export default function App() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 text-center">
-              <CTAButton text="QUERO AS RECEITAS" onClick={scrollToOffer} />
-            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-10 md:py-14 overflow-hidden bg-gray-50/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-primary mb-6 text-center uppercase leading-tight">
-            VEJA O QUE DIZEM SOBRE AS<br />
-            <span className="text-brand-accent">RECEITAS DA NUTRI:</span>
-          </h2>
-          <TestimonialCarousel images={testimonials} />
         </div>
       </section>
 
@@ -516,7 +514,7 @@ export default function App() {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4 max-w-5_xl">
           <h2 className="text-2xl md:text-4xl font-bold text-brand-primary mb-6 text-center uppercase leading-tight">
-            COMO IREI <span className="text-brand-accent">RECEBER</span> AS RECEITAS?
+            COMO VOCÊ IRÁ <span className="text-brand-accent">RECEBER</span> SEU GUIA:
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-6 mt-4">
             <div className="w-full md:w-1/2 group">
@@ -566,7 +564,7 @@ export default function App() {
             />
             <AccordionItem 
               question="São receitas saudáveis?" 
-              answer="Todas são saudáveis, equilibradas e pensadas para oferecer os nutrientes e vitaminas que seu corpo precisa para começar bem o dia." 
+              answer="Todas são saudáveis, equilibradas e pensadas para oferecer los nutrientes e vitaminas que seu corpo precisa para começar bem o dia." 
             />
             <AccordionItem 
               question="As receitas servem para a família toda?" 
